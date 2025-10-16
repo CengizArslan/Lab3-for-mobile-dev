@@ -1,0 +1,28 @@
+plugins {
+    id("com.android.application")
+    id("com.facebook.react")
+    id("org.jetbrains.kotlin.android")
+}
+
+android {
+    namespace "com.contactmanagerapp"
+    compileSdkVersion rootProject.ext.compileSdkVersion
+
+    defaultConfig {
+        applicationId "com.contactmanagerapp"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+}
